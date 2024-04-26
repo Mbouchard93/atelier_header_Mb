@@ -59,8 +59,8 @@ nav {
 }
 
 nav img {
-    height: 60px;
-    max-width: 300px;
+    height: auto ;
+    max-width: 100px;
 }
 
 nav>ul {
