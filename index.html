@@ -5,29 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <link rel="stylesheet" href="/assets/css/banner.css">
+    <link rel="stylesheet" href="/assets/css/animation.css">
+    <link rel="stylesheet" href="./assets/css/products.css">
+    <script src="./assets/js/modale.js" defer></script>
     <script src="./assets/js/app.js" defer></script>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
 <body>
-    <div class="modal hidden" aria-hidden="true">
-        <div class="overlay" >
-            <ul>
-                <li><a href="">Acceuil</a></li>
-                <li><a href="">Produit </a> </li>
-                <li><a href="">À propos </a> </li>
-                <li> <a href="">FAQ</a> </li>
-                <li><a href="">Contact </a> </li>
-            </ul>
-            <span tabindex="0" role="button"  class="material-symbols-outlined icone">
-                close
-            </span>
-        </div>
-    </div>
     <header>
-        <div role="banner">
+        <div class="header__mobile" id="menu-mobile">
+            <div class="overlay">
+                <ul>
+                    <li><a href="">Acceuil</a></li>
+                    <li><a href="">Produit </a> </li>
+                    <li><a href="">À propos </a> </li>
+                    <li> <a href="">FAQ</a> </li>
+                    <li><a href="">Contact </a> </li>
+                </ul>
+                <button data-dialog="#menu-mobile" class="material-symbols-outlined icone">
+                    close
+                </button>
+            </div>
+        </div>
+        <div class="ship" role="banner">
             <p>Livraison gratuite pour les commandes de 75$ et plus!</p>
         </div>
         <nav>
@@ -40,24 +44,41 @@
                 <li><a href="">Contact </a> </li>
             </ul>
             <div class="svg">
-                <svg aria-label="Icône de recherche" tabindex="0" role="button"  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="w-6 h-6">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-                </svg>
-                <svg aria-label="panier d'achat" tabindex="0" role="button"  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="w-6 h-6">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                </svg>
-                <svg aria-label="Ouvrir le menue" tabindex="0" role="button"  class="mobile_display" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                </svg>
+                <button aria-label="Cliquer pour rechercher un produit">
+                    <img src="./assets/img/icone/search.svg" alt="">
+                </button>
+                <button aria-label="Le panier d'achat">
+                    <img src="./assets/img/icone/shopping.svg" alt="">
+                </button>
+                <button class="mobile_display" data-dialog="#menu-mobile" aria-label="Ouvrir le menu">
+                    <img src="/assets/img/icone/menu.svg" alt="">
+                </button>
             </div>
         </nav>
     </header>
+    <main>
+        <section class="container_banner">
+            <div class="banner_left">
+                <picture>
+                    <source media="(min-width:1024px)" srcset="./assets/img/baner.png">
+                    <img src="./assets/img/banner_mobile.png" alt="">
+                </picture>
+            </div>
+            <div class="banner_right">
+                <h1>Planifier vôtre monter</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum sint ducimus repellat. Eaque labore
+                    facilis perspiciatis natus dolorem, soluta culpa laboriosam at atque, eum laborum possimus nostrum,
+                    voluptatem ex assumenda ullam fugit minima maiores eius voluptatum blanditiis corrupti doloremque
+                    reprehenderit. Inventore, sint. Rerum tempore molestias cum repudiandae. Minus ratione laboriosam
+                    commodi voluptatem perferendis minima eaque. Temporibus nihil error magni enim in repellat ipsum
+                    eaque odio quae consectetur! Minima provident dolor, expedita necessitatibus aspernatur consectetur
+                    ad.</p>
+                    <button class="btn_banner">en savoir plus</button>
+            </div>
+        </section>
+        <section class="products">
+        </section>
+    </main>
 </body>
 
 </html>

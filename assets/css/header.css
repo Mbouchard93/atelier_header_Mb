@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: .8rem;
+    font-family: "Montserrat", sans-serif;
+}
+
+body:has(.header__mobile [open]) {
+    overflow-y: hidden;
+  }
+
+button {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+  }
+
+
+.header__mobile {
+    display: none;
+    height: 100dvh;
+    width: 100dvw;
+    background-color: rgba(0, 0, 0, 0.356);
+    position: fixed;
+    top: 0;
+
+}
+
+
+.header__mobile[open] {
+    animation: opIn 0.3s ease forwards;
+    display: block;
+  }
+
+  .header__mobile[closing] {
+    animation: opOut 0.3s ease forwards;
+  }
+  
+  .header__mobile[open] .overlay {
+    animation: slideIn .6s ease forwards;
+    display: block;
+  }
+
+  .header__mobile[closing] .overlay {
+    animation: slideOut .6s ease forwards;
+  }
+  
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 90vw;
+    background-color: white;
+    box-shadow: 4px 4px 10px #0000005c;
+}
+
+.overlay>ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.overlay a{
+    font-size: 1.5rem;
+}
+
+
+
+.icone {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.ship {
+    height: 30px;
+    background-color:#4B6065 ;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    background-color: #D5CDB4;
+}
+
+nav img {
+    height: auto ;
+    max-width: 100px;
+}
+
+.nav_desktop {
+    display: none;
+
+}
+
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+.svg {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    cursor: pointer;
+}
+
+svg:hover{
+    color: rgb(92, 43, 226);
+}
+
+
+.mobile_display {
+    cursor: pointer;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+@media screen and (min-width: 1024px) {
+    :root {
+        font-size: 1rem;
+    }
+
+    .mobile_display {
+        display: none;
+    }
+
+    .nav_desktop {
+        display: flex;
+        width: 80%;
+        gap: 1rem;
+        align-items: center;
+    }
+    nav img {
+        max-width: 150px;
+    }
+}
+
